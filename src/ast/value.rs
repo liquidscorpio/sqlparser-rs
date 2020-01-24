@@ -63,7 +63,7 @@ impl fmt::Display for Value {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
             Value::Number(v) => write!(f, "{}", v),
-            Value::SingleQuotedString(v) => write!(f, "'{}'", escape_single_quote_string(v)),
+            Value::SingleQuotedString(v) => write!(f, "'{}'", v),
             Value::NationalStringLiteral(v) => write!(f, "N'{}'", v),
             Value::HexStringLiteral(v) => write!(f, "X'{}'", v),
             Value::Boolean(v) => write!(f, "{}", v),
